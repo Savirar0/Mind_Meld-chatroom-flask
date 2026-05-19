@@ -1,0 +1,15 @@
+# 1. Virtual Environments (Too massive to upload)
+.venv/
+venv/
+env/
+
+# 2. Python Junk (Breaks servers)
+__pycache__/
+*.pyc
+
+# 3. Secrets (NEVER upload API keys or passwords)
+.env
+
+# 4. Local Database (Prevents Render from wiping your live data)
+*.db
+instance/
