@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, session, redirect, url_for
 from flask_socketio import join_room, leave_room, send, SocketIO
 import random
 from string import ascii_uppercase
+import os
+
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "keykeykey0"
@@ -90,5 +92,7 @@ def disconnect():
     send({"name": name, "message": "has left the room"}, to=room)
     print(f"log: {name} has left the {room}")
 
+
 if __name__ == "__main__":
-    socketio.run(app, debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    socketio.run(app, host="0.0.0.0", port=port, debug=False)
