@@ -1,4 +1,5 @@
-# Flask Chat App
+# Mind Meld
+A Flask Chat App
 
 A real-time chat application built with Flask and SocketIO. Create or join rooms and chat instantly.
 
